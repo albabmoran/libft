@@ -6,7 +6,7 @@
 /*   By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 20:25:37 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/13 23:30:06 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/14 19:11:23 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*p;
 	unsigned int	i;
-	
+
 	if (!dst && !src)
 		return (NULL);
 	p = dst;
 	i = 0;
 	while (i < n)
 	{
-		p[i] = ((unsigned const char*)src)[i];
+		p[i] = ((unsigned const char *)src)[i];
 		i++;
 	}
 	return (dst);

@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 19:04:04 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/15 10:56:39 by albben-a         ###   ########.fr       */
+/*   Created: 2026/01/15 10:30:05 by albben-a          #+#    #+#             */
+/*   Updated: 2026/01/15 10:34:05 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		c = c + 32;
+	return (c);
+}
+/*
+#include <stdio.h>
+#include <ctype.h>
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
+int	main(void)
+{
+	int	c = 'a';
 
-#endif
+	printf("%d\n", ft_tolower(c));
+	printf("%d", tolower(c));
+	return (0);
+}*/

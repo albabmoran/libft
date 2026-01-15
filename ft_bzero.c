@@ -6,11 +6,11 @@
 /*   By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 19:57:31 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/13 20:24:51 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/15 15:56:06 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

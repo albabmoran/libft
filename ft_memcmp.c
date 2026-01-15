@@ -6,11 +6,11 @@
 /*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 11:55:30 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/15 12:11:29 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/15 15:59:39 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

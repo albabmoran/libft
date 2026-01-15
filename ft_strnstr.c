@@ -6,11 +6,11 @@
 /*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 12:12:10 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/15 12:39:41 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/15 16:00:09 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

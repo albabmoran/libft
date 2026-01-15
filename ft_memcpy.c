@@ -6,11 +6,11 @@
 /*   By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 20:25:37 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/14 19:11:23 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/15 15:56:26 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

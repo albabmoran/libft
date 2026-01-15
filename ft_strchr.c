@@ -6,11 +6,11 @@
 /*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 10:34:41 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/15 10:54:46 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/15 15:57:57 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

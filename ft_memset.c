@@ -6,11 +6,11 @@
 /*   By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 19:12:40 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/13 19:57:00 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/15 15:55:44 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

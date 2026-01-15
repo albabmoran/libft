@@ -6,22 +6,11 @@
 /*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 13:01:23 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/15 13:13:14 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/15 16:00:54 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
-
-size_t ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
 
 char *ft_strdup(const char *s)
 {

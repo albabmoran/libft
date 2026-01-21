@@ -6,7 +6,7 @@
 /*   By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:01:48 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/21 13:06:12 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/21 13:26:57 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 	int		len;
 
+	if (!s1)
+		return (NULL);
 	i = find_start(s1, set);
 	len = find_end(s1, set, i);
 	str = malloc(len - i + 1);

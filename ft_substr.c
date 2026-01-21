@@ -1,43 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/15 13:01:23 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/20 16:57:32 by albben-a         ###   ########.fr       */
+/*   Created: 2026/01/20 16:08:02 by albben-a          #+#    #+#             */
+/*   Updated: 2026/01/20 16:58:10 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*dup;
-	int		i;
+	unsigned char	*str;
+	unsigned int	i;
 
-	dup = malloc(ft_strlen(s) + 1);
-	if (!dup)
+	str = malloc(len * sizeof(char));
+	if (!str)
 		return (NULL);
 	i = 0;
-	while (s[i] != '\0')
+	while (s[start + i] && i < len)
 	{
-		dup[i] = ((char *)s)[i];
+		str[i] = s[start + i];
 		i++;
 	}
-	dup[i] = '\0';
-	return (dup);
+	str[i] = '\0';
+	return (str);
 }
 /*
 #include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {
-	char	s[] = "hola23 qu*e ta?l";
-
-	printf("%s\n", ft_strdup(s));
-	printf("%s", strdup(s));
-	return (0);
+	unsigned char	*s;
+	unsigned int	start;
+	unsigned int	len;
 }*/

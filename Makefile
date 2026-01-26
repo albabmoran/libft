@@ -6,17 +6,19 @@
 #    By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/20 12:01:56 by albben-a          #+#    #+#              #
-#    Updated: 2026/01/20 15:41:20 by albben-a         ###   ########.fr        #
+#    Updated: 2026/01/26 18:04:12 by albben-a         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
+HEADER = libft.h
+
 CC = cc
 
 FLAGS = -Wall -Wextra -Werror
 
-HEADER = libft.h
+AR = ar -rcs
 
 SRC =	ft_isalpha.c \
 	ft_isdigit.c \
@@ -41,3 +43,36 @@ SRC =	ft_isalpha.c \
 	ft_atoi.c \
 	ft_calloc.c \
 	ft_strdup.c \
+	ft_substr.c \
+	ft_strjoin.c \
+	ft_strtrim.c \
+	ft_split.c \
+	ft_itoa.c \
+	ft_strmapi.c \
+	ft_striteri.c \
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c \
+
+OBJ = $(SRC:.c=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(AR) $(NAME) $(OBJ)
+
+%.o: %.c $(HEADER)
+	$(CC) $(FLAGS) -c $< -o $@
+
+clean:
+	@rm -f $(OBJ)
+	@echo "OBJ deleted"
+
+fclean: clean
+	@rm -f $(NAME)
+	@echo "$(NAME) deleted"
+
+re: fclean all
+
+.PHONY: all clean fclean re

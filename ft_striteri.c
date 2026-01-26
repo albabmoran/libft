@@ -1,33 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 16:24:43 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/26 14:30:05 by albben-a         ###   ########.fr       */
+/*   Created: 2026/01/26 13:41:19 by albben-a          #+#    #+#             */
+/*   Updated: 2026/01/26 14:31:19 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	write(fd, &c, 1);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 /*
-#include <fcntl.h>
+void	ft_upper(unsigned int n, char	*p)
+{
+	(void)n;
+	*p = *p - 32;
+}
+
+#include <stdio.h>
 
 int	main(void)
 {
-	int	fd;
-	char	c = 'a';
+	char	s[] = "abcdef";
 
-	fd = open("test.txt", O_WRONLY);
-	if (fd == -1)
-		return (0);
-	ft_putchar_fd(c, fd);
-	close(fd);
+	printf("%s\n", s);
+	ft_striteri(s, ft_upper);
+	printf("%s", s);
 	return (0);
 }*/

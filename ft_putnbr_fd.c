@@ -1,20 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 16:24:43 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/26 14:30:05 by albben-a         ###   ########.fr       */
+/*   Created: 2026/01/26 14:07:30 by albben-a          #+#    #+#             */
+/*   Updated: 2026/01/26 14:29:10 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	write(fd, &c, 1);
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else
+	{
+		if (n < 0)
+		{
+			n = -n;
+			write(fd, "-", 1);
+		}
+		if (n > 9)
+		{
+			ft_putnbr_fd(n / 10, fd);
+			ft_putnbr_fd(n % 10, fd);
+		}
+		if (n < 10)
+			ft_putchar_fd((n + '0'), fd);
+	}
 }
 /*
 #include <fcntl.h>
@@ -22,12 +38,11 @@ void	ft_putchar_fd(char c, int fd)
 int	main(void)
 {
 	int	fd;
-	char	c = 'a';
+	int	n = 1234;
 
 	fd = open("test.txt", O_WRONLY);
 	if (fd == -1)
 		return (0);
-	ft_putchar_fd(c, fd);
-	close(fd);
+	ft_putnbr_fd(n, fd);
 	return (0);
 }*/

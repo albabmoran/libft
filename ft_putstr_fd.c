@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 16:24:43 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/26 14:30:05 by albben-a         ###   ########.fr       */
+/*   Created: 2026/01/26 13:52:01 by albben-a          #+#    #+#             */
+/*   Updated: 2026/01/26 13:57:31 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
+	int	len;
+
+	len = ft_strlen((const char *)s);
+	write(fd, s, len);
 }
 /*
 #include <fcntl.h>
@@ -22,12 +25,12 @@ void	ft_putchar_fd(char c, int fd)
 int	main(void)
 {
 	int	fd;
-	char	c = 'a';
+	char	s[] = "hola que tal";
 
 	fd = open("test.txt", O_WRONLY);
-	if (fd == -1)
+	if	(fd == -1)
 		return (0);
-	ft_putchar_fd(c, fd);
+	ft_putstr_fd(s, fd);
 	close(fd);
 	return (0);
 }*/

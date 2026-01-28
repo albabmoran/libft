@@ -6,7 +6,7 @@
 /*   By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 15:36:19 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/27 16:12:09 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/28 15:09:53 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,30 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	
+	t_list	*node;
+
+	node = malloc(sizeof(t_list));
+	if (!node)
+		return (NULL);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	t_list	*node;
+	int	content[] = {1, 2, 3};
+	int	i;
+
+	node = ft_lstnew(content);
+	i = 0;
+	while (i < 3)
+	{
+		printf("%d", ((int *)node->content)[i]);
+		i++;
+	}
+	return (0);
+}*/

@@ -6,7 +6,7 @@
 #    By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/20 12:01:56 by albben-a          #+#    #+#              #
-#    Updated: 2026/01/26 18:04:12 by albben-a         ###   ########.fr        #
+#    Updated: 2026/01/30 10:12:40 by albben-a         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,15 @@ SRC =	ft_isalpha.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
+	ft_lstnew.c \
+	ft_lstadd_front.c \
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c \
 
 OBJ = $(SRC:.c=.o)
 

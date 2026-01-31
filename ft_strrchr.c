@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: albben-a <albben-a@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 11:00:16 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/15 15:58:17 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/29 18:34:24 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,22 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	const char	*temp;
+	char		char_c;
 
+	char_c = (char) c;
 	temp = s;
 	while (*s != '\0')
 		s++;
-	if (c == '\0')
+	if (char_c == '\0')
 		return ((char *)s);
 	while (s != temp)
 	{
-		if (*s == c)
+		if (*s == char_c)
 			return ((char *)s);
 		s--;
 	}
+	if (*s == char_c)
+		return ((char *)s);
 	return (NULL);
 }
 /*

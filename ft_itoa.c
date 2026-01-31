@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: albben-a <albben-a@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 13:27:26 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/21 16:11:58 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/31 16:54:04 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*get_string(int n, int count, char *str)
+static char	*get_string(int n, int count, char *str)
 {
 	int	i;
 

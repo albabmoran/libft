@@ -6,7 +6,7 @@
 /*   By: albben-a <albben-a@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 18:34:16 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/28 19:09:09 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/31 16:47:58 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		temp = temp->next;
 	}
 }
-
+/*
 void	ft_upper(void *content)
 {
 	int				i;
@@ -37,7 +37,7 @@ void	ft_upper(void *content)
 		i++;
 	}
 }
-/*
+	
 #include <stdio.h>
 
 int	main(void)

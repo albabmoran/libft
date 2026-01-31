@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:14:08 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/28 15:34:44 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/30 10:10:04 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,15 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	last = ft_lstlast(*lst);
-	last->next = new;
+	if (!lst || !new)
+		return ;
+	if (*lst == NULL)
+		ft_lstadd_front(lst, new);
+	else
+	{
+		last = ft_lstlast(*lst);
+		last->next = new;
+	}
 }
 /*
 #include <stdio.h>

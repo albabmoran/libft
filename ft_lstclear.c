@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albben-a <albben-a@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 17:03:41 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/28 18:32:40 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/31 16:18:41 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*temp;
 	t_list	*temp_next;
 
+	if (!lst)
+		return ;
 	temp = *lst;
 	temp_next = temp;
 	while (temp != NULL)
@@ -26,6 +28,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		free(temp);
 		temp = temp_next;
 	}
+	*lst = NULL;
 }
 /*
 void	ft_del(void *content)

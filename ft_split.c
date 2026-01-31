@@ -6,7 +6,7 @@
 /*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 10:49:21 by albben-a          #+#    #+#             */
-/*   Updated: 2026/01/21 11:49:42 by albben-a         ###   ########.fr       */
+/*   Updated: 2026/01/31 16:37:51 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,9 @@ char	**ft_split(char const *s, char c)
 	array = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!array)
 		return (NULL);
-	create_array(s, c, array);
+	array = create_array(s, c, array);
+	if (!array)
+		return (NULL);
 	array[count_words(s, c)] = NULL;
 	return (array);
 }
@@ -95,8 +97,8 @@ char	**ft_split(char const *s, char c)
 int	main(void)
 {
 	char	**s;
-	char	str[] = ",,,,,hola, que,tal";
-	char	c = ',';
+	char	str[] = "xxxxxxxxhello!";
+	char	c = 'x';
 	int		i;
 
 	s = ft_split(str, c);
@@ -104,6 +106,7 @@ int	main(void)
 	while (s[i])
 	{
 		printf("%s\n", s[i]);
+		free(s[i]);
 		i++;
 	}
 	free(s);

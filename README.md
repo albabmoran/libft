@@ -168,7 +168,7 @@ The library is divided into three main parts: libc functions, additional functio
 
 ---
 
-### Bonus – Linked List Functions
+### Linked List Functions
 
 - **ft_lstnew**  
   Creates a new linked list node.

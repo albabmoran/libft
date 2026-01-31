@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *This project was developed as part of the 42 curriculum by albben-a*
 # libft
 ## Description
